@@ -1,0 +1,22 @@
+[copr:copr.fedorainfracloud.org:cappyishihara:fedorajam-plus]
+name=Fedora Jam Plus
+baseurl=https://download.copr.fedorainfracloud.org/results/cappyishihara/fedorajam-plus/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/cappyishihara/fedorajam-plus/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+
+[copr:copr.fedorainfracloud.org:cappyishihara:fedorajam-plus:ml]
+name=Fedora Jam Plus (i386)
+baseurl=https://download.copr.fedorainfracloud.org/results/cappyishihara/fedorajam-plus/fedora-$releasever-i386/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/cappyishihara/fedorajam-plus/pubkey.gpg
+repo_gpgcheck=0
+cost=1100
+enabled=1
+enabled_metadata=1

@@ -1,0 +1,21 @@
+[copr::cappyishihara:cyber-desktop]
+name=Cyber Desktop
+baseurl=https://download.copr.fedorainfracloud.org/results/cappyishihara/cyber-desktop/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/cappyishihara/cyber-desktop/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+
+[copr::cappyishihara:cyber-desktop-testing]
+name=Cyber Desktop (testing)
+baseurl=https://download.copr.fedorainfracloud.org/results/cappyishihara/cyber-desktop-testing/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/cappyishihara/cyber-desktop-testing/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
