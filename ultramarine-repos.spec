@@ -108,7 +108,6 @@ type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
-excludepkgs=*freeworld* ffmpeg-libs gstreamer1-libav gstreamer1-plugins-ugly libaacs* libdca* libde265* libdvbcsa* libfame* libftl* libheif* libmms* libmpeg3* libndi* libquicktime* librtmp* libshairport* live555* medialibrary* mjpegtools-libs mythffmpeg vo-amrwbenc* x264* x265* xine-lib* xvidcore*
 
 [rpmfusion-free-debuginfo]
 name=RPM Fusion for Fedora $releasever - Free - Debug
@@ -145,7 +144,6 @@ type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
-excludepkgs=*freeworld* ffmpeg-libs gstreamer1-libav gstreamer1-plugins-ugly libaacs* libdca* libde265* libdvbcsa* libfame* libftl* libheif* libmms* libmpeg3* libndi* libquicktime* librtmp* libshairport* live555* medialibrary* mjpegtools-libs mythffmpeg vo-amrwbenc* x264* x265* xine-lib* xvidcore*
 
 [rpmfusion-free-updates-debuginfo]
 name=RPM Fusion for Fedora $releasever - Free - Updates Debug
