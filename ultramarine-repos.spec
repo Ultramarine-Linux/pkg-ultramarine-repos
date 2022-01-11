@@ -3,7 +3,7 @@
 
 Name: ultramarine-repos
 Version: %{_dist_version}
-Release: 0.51
+Release: 0.52
 License: MIT
 Summary: Repositories for Ultramarine Linux
 Requires: %{name}-common = %{version}-%{release}
@@ -17,6 +17,7 @@ Metapackage for Ultramarine Linux repositories
 Summary: Common repository for Ultramarine Linux
 Requires: fedora-repos(%{version})
 Source100: ultramarine.repo
+Source101: ultramarine-updates.repo
 %description common
 Common repository file for Ultramarine Linux
 
@@ -53,19 +54,6 @@ PatrickL's extra Copr repositories for audio production. Includes:
     - cappyishihara's Wine-TkG patch
     - libcurl-gnutls for some plugins with issues (Matt Tytel Vital, for example.)  --> enabled by default
 
-%package cyber
-Summary: Repository for the Cyber Desktop
-Source400: cyber-desktop.repo
-%description cyber
-Repository file for the Cyber Desktop
-
-%package cutefish
-Summary: Repository for the Cutefish Desktop
-Source500: cutefish-desktop.repo
-%description cutefish
-Repository file for the Cutefish Desktop
-
-
 %prep
 
 %build
@@ -76,7 +64,7 @@ mkdir -p %{buildroot}/%{_sysconfdir}/yum.repos.d/
 
 #common
 cp -avx %{SOURCE100} %{buildroot}/%{_sysconfdir}/yum.repos.d/
-
+cp -avx %{SOURCE101} %{buildroot}/%{_sysconfdir}/yum.repos.d/
 #extras
 cp -avx %{SOURCE205} %{buildroot}/%{_sysconfdir}/yum.repos.d/
 cp -avx %{SOURCE206} %{buildroot}/%{_sysconfdir}/yum.repos.d/
@@ -84,12 +72,6 @@ cp -avx %{SOURCE209} %{buildroot}/%{_sysconfdir}/yum.repos.d/
 
 #extras-jam
 cp -avx %{SOURCE300} %{buildroot}/%{_sysconfdir}/yum.repos.d/
-
-#cyber
-cp -avx %{SOURCE400} %{buildroot}/%{_sysconfdir}/yum.repos.d/
-
-#cutefish
-cp -avx %{SOURCE500} %{buildroot}/%{_sysconfdir}/yum.repos.d/
 
 # Flatpak remotes
 mkdir -p %{buildroot}/%{_sysconfdir}/flatpak/remotes.d
@@ -241,7 +223,7 @@ EOF
 
 %files common
 %{_sysconfdir}/yum.repos.d/ultramarine.repo
-
+%{_sysconfdir}/yum.repos.d/ultramarine-updates.repo
 %files extras
 %{_sysconfdir}/flatpak/remotes.d/flathub.flatpakrepo
 %{_sysconfdir}/yum.repos.d/akmods-secureboot.repo
@@ -254,9 +236,3 @@ EOF
 
 %files extras-jam
 %{_sysconfdir}/yum.repos.d/fedorajam-plus.repo
-
-%files cyber
-%{_sysconfdir}/yum.repos.d/cyber-desktop.repo
-
-%files cutefish
-%{_sysconfdir}/yum.repos.d/cutefish-desktop.repo

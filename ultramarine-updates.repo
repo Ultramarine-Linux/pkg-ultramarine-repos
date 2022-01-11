@@ -1,0 +1,10 @@
+[ultramarine]
+name=Ultramarine $releasever Updates - $basearch
+baseurl=https://lapis.ultramarine-linux.org/pub/ultramarine-updates/$releasever/Everything/$basearch/os/
+type=rpm
+skip_if_unavailable=True
+gpgcheck=0
+gpgkey=https://lapis.ultramarine-linux.org/pub/ultramarine/$releasever/RPM-GPG-KEY-ultramarine
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
