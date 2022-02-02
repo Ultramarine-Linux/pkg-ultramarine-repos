@@ -3,7 +3,7 @@
 
 Name: ultramarine-repos
 Version: %{_dist_version}
-Release: 0.61
+Release: 0.62
 License: MIT
 Summary: Repositories for Ultramarine Linux
 Requires: %{name}-common = %{version}-%{release}
